@@ -18,4 +18,10 @@ router.get("/viewvehicle",async(req,res)=>{
     res.json(data)
 })
 
+router.post("/searchvehicle",async(req,res)=>{
+    let input=req.body
+    let data=await vehicleModel.find(input)
+    res.json(data)
+})
+
 module.exports=router

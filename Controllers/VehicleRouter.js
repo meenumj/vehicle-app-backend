@@ -13,5 +13,9 @@ router.post("/addvehicle",async(req,res)=>{
     })
 })
 
+router.get("/viewvehicle",async(req,res)=>{
+    let data=await vehicleModel.find() // to retrieve data
+    res.json(data)
+})
 
 module.exports=router
